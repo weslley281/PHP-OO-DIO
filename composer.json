@@ -1,0 +1,16 @@
+{
+    "name": "cadastro2/php-oo-dio",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Cadastro2\\PhpOoDio\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Weslley Ferraz",
+            "email": "weslleyhenrique800@gmail.com"
+        }
+    ],
+    "require": {}
+}
