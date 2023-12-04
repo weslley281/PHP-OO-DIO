@@ -3,15 +3,15 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use Cadastro2\PhpOoDio\ContaBancaria;
 
-$conta = new ContaBancaria();
+$conta = new ContaBancaria("Banco Pan", "Fulano de tal", "1234", "0008-1", 2000);
 
-var_dump($conta);
 var_dump($conta->exibirDadosBancario());
 
-$conta2 = new ContaBancaria();
-$conta2->setBanco("Banco Seguro");
-$conta2->setNomeTitular("Cicrano de Tal");
-$conta2->setNumeroAgencia("4321");
-$conta2->setNumeroDaConta("0007-1");
-$conta2->setSaldo(3000);
-var_dump($conta2->exibirDadosBancario());
+echo $conta->depositar(500);
+echo PHP_EOL;
+
+echo $conta->sacar(1500);
+echo PHP_EOL;
+
+echo $conta->getSaldo();
+echo PHP_EOL;
