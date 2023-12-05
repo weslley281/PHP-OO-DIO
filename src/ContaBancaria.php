@@ -2,7 +2,7 @@
 
 namespace Cadastro2\PhpOoDio;
 
-class ContaBancaria
+abstract class ContaBancaria
 {
     private string $banco;
     private string $nomeTitular;
@@ -55,13 +55,17 @@ class ContaBancaria
         ];
     }
 
-    public function depositar(float $deposito): void
+    public function depositar(float $deposito): string
     {
         $this->saldo += $deposito;
+        return "Depósito de R$ $deposito realizado";
     }
 
-    public function sacar(float $saque): void
+    public function sacar(float $saque): string
     {
         $this->saldo -= $saque;
+        return "Saque de R$ $saque realizado";
     }
+
+    abstract public function obterSaldo(): string;
 }
